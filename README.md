@@ -24,7 +24,9 @@ Users should be able to:
 
 ### Screenshot and Live Site
 
-![](./public/img/screenshot.png)
+<p align="center">
+  <img alt="pricing component card screenshop" src="./public/img/screenshot.png"/>
+</p>
 
 - Live Site URL: [Interactive pricing component](https://mathieu-superpose.github.io/interactive_pricing_component/)
 
@@ -40,6 +42,10 @@ Users should be able to:
 ### Useful resources
 
 - [Custom slider](https://codepen.io/nlfonseca/pen/MwbovQ)
+
+### Future improvement
+
+- make the right part of the slider (inactive) a different color from the left part (active)
 
 ## Author
 
