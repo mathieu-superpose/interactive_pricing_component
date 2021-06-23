@@ -1,0 +1,241 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+li {
+  list-style: none; }
+
+a:link {
+  text-decoration: none; }
+
+a:visited {
+  text-decoration: none; }
+
+a:hover {
+  text-decoration: none; }
+
+a:active {
+  text-decoration: none; }
+
+h1, h2, p, button, li, a {
+  font-family: 'Manrope', sans-serif; }
+
+body {
+  background-image: url("../src/img/bg-pattern.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fafbff; }
+  @media (min-width: 768px) {
+    body {
+      background-size: 100% auto; } }
+
+.title {
+  background-image: url("../src/img/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center; }
+  @media (min-width: 768px) {
+    .title {
+      padding: 10vh; } }
+  .title h1 {
+    color: #293356;
+    font-size: 1.5em;
+    line-height: 2em; }
+    @media (min-width: 768px) {
+      .title h1 {
+        font-size: 2em; } }
+  .title h2 {
+    color: #858fad;
+    font-size: 1em;
+    width: 70%; }
+
+.card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  min-height: 50vh;
+  min-width: 35vw;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4em;
+  padding-bottom: 1em; }
+  @media (min-width: 768px) {
+    .card {
+      padding-bottom: 0; } }
+  .card__pricing {
+    padding: 0 2em;
+    margin: 2em 0 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; }
+    @media (min-width: 768px) {
+      .card__pricing {
+        padding: 0 5em;
+        width: 100%;
+        justify-content: space-between; } }
+    .card__pricing__pageviews {
+      order: 1;
+      color: #858fad;
+      text-transform: uppercase; }
+    .card__pricing__slider {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      order: 2;
+      -webkit-appearance: none;
+      /* Hides the slider so that custom slider can be made */
+      background-color: #a5f3eb;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 25%;
+      height: 0.7em;
+      width: 100%;
+      border-radius: 10px;
+      margin: 3em 0; }
+      @media (min-width: 768px) {
+        .card__pricing__slider {
+          order: 3; } }
+      .card__pricing__slider::-webkit-slider-thumb {
+        align-self: center;
+        -webkit-appearance: none;
+        width: 3em;
+        height: 3em;
+        border-radius: 50%;
+        background-color: #10d5c2;
+        background-image: url("../src/img/icon-slider.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0px 15px 15px #a5f3eb; }
+    .card__pricing__price {
+      order: 2;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5em; }
+      .card__pricing__price__sum {
+        font-size: 2em;
+        color: #293356; }
+        @media (min-width: 768px) {
+          .card__pricing__price__sum {
+            font-size: 2.7em; } }
+      .card__pricing__price__period {
+        color: #858fad; }
+  .card__options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 2em; }
+    @media (min-width: 768px) {
+      .card__options {
+        align-self: flex-end;
+        padding: 0 8em 3em 0; } }
+    .card__options__period {
+      color: #858fad;
+      font-size: 0.8em; }
+    .card__options__checkbox {
+      height: 0;
+      width: 0;
+      visibility: hidden; }
+    .card__options__label {
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 2.6em;
+      height: 1.3em;
+      background: #a5f3eb;
+      display: block;
+      border-radius: 1.3em;
+      position: relative; }
+    .card__options__label:after {
+      content: '';
+      position: absolute;
+      top: 3px;
+      left: 3px;
+      width: 1em;
+      height: 1em;
+      background: #fff;
+      border-radius: 50%;
+      transition: 0.3s; }
+    .card__options__checkbox:checked + label {
+      background: #ff8c66; }
+    .card__options__checkbox:checked + label:after {
+      left: calc(100% - 3px);
+      transform: translateX(-100%); }
+    .card__options__label:active:after {
+      width: 1em; }
+    .card__options__discount {
+      display: none;
+      border: 0;
+      border-radius: 1em;
+      background-color: #feece7;
+      color: #ff8c66;
+      font-size: 0.7em;
+      padding: 0.1em 0.5em; }
+      @media (min-width: 768px) {
+        .card__options__discount {
+          display: block; } }
+    .card__options__minus {
+      border: 0;
+      border-radius: 1em;
+      background-color: #feece7;
+      color: #ff8c66;
+      font-size: 0.7em;
+      padding: 0.1em 0.5em; }
+      @media (min-width: 768px) {
+        .card__options__minus {
+          display: none; } }
+  .card__cta {
+    width: 100%;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid #cdd7ee; }
+    @media (min-width: 768px) {
+      .card__cta {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 3em 5em; } }
+    .card__cta__list {
+      margin-bottom: 1em; }
+      .card__cta__list__argument {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        color: #858fad;
+        font-size: 0.8em;
+        line-height: 2em; }
+        @media (min-width: 768px) {
+          .card__cta__list__argument {
+            justify-content: flex-start;
+            align-items: center; } }
+      .card__cta__list__argument::before {
+        display: flex;
+        content: '';
+        background-image: url("../src/img/icon-check.svg");
+        background-size: 0.8em 0.8em;
+        height: 0.8em;
+        width: 0.8em; }
+    .card__cta__startButton {
+      border: none;
+      background-color: #293356;
+      color: #fafbff;
+      padding: 1em 3em;
+      border-radius: 2em; }
+
+/*# sourceMappingURL=style.css.map */

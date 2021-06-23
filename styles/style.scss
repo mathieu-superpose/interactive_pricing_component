@@ -1,0 +1,293 @@
+@import './resets';
+@import './colors';
+@import './fonts';
+
+body {
+	background-image: url('../src/img/bg-pattern.svg');
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+  background-color: $blue_pale;
+
+  @media (min-width: 768px) {
+    background-size: 100% auto;
+  }
+}
+
+.title {
+	background-image: url('../src/img/pattern-circles.svg');
+	background-repeat: no-repeat;
+  background-position: center;
+  padding: 10vh 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    padding: 10vh;
+  }
+
+  & h1 {
+    color: $blue_dark;
+    font-size: 1.5em;
+    line-height: 2em;
+
+    @media (min-width: 768px) {
+      font-size: 2em;
+    }
+  }
+
+  & h2 {
+    color: $grayish_blue;
+    font-size: 1em;
+    width: 70%;
+  }
+}
+
+.card {
+	background-color: $white;
+	border-radius: 15px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	min-height: 50vh;
+	min-width: 35vw;
+  max-width: 90vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 4em;
+  padding-bottom: 1em;
+
+  @media (min-width: 768px) {
+    padding-bottom: 0;
+  }
+
+  &__pricing {
+    padding: 0 2em;
+    margin: 2em 0 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      padding: 0 5em;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__pageviews {
+      order: 1;
+      color: $grayish_blue;
+      text-transform: uppercase;
+    }
+
+    &__slider {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      order: 2;
+      -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+      //background-color: $grayish_blue_pale;
+      background-color: $cyan_soft;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 100% 25%;
+      height: 0.7em;
+      width: 100%;
+      //color: $cyan_soft;
+      border-radius: 10px;
+      margin: 3em 0;
+
+      @media (min-width: 768px) {
+        order: 3;
+      }
+    
+
+      // &::-webkit-slider-runnable-track {
+      //   -webkit-appearance: none; //Hides the slider so that custom slider can be made
+      //   background-color: $cyan_soft;
+      //   content: '';
+      //   height: 0.7em;
+      //   border-radius: 10px;
+      //   //pointer-events: none;
+      // }
+
+      &::-webkit-slider-thumb {
+        align-self: center;
+        -webkit-appearance: none;
+        width: 3em;
+        height: 3em;
+        //padding: 0.25em;
+        //border: 1px solid #FFF;
+        border-radius: 50%;
+        background-color: $cyan_strong;
+        background-image: url('../src/img/icon-slider.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0px 15px 15px $cyan_soft;
+
+      }
+    }
+
+    &__price {
+      order: 2;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5em;
+
+      &__sum {
+        font-size: 2em;
+        color: $blue_dark;
+        @media (min-width: 768px) {
+          font-size: 2.7em;
+        }
+      }
+      &__period {
+        color: $grayish_blue;
+      }
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    margin-bottom: 2em;
+
+    @media (min-width: 768px) {
+      align-self: flex-end;
+      padding: 0 8em 3em 0;
+    }
+
+    &__period {
+      color: $grayish_blue;
+      font-size: 0.8em;
+    }
+
+    &__checkbox {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+    }
+
+    &__label {
+      cursor: pointer;
+      text-indent: -9999px;
+      width: 2.6em; //200px
+      height: 1.3em; //100px
+      background: $cyan_soft;
+      display: block;
+      border-radius: 1.3em; //100px
+      position: relative;
+    }
+
+
+    &__label:after {
+      content: '';
+      position: absolute;
+      top: 3px; //5px
+      left: 3px; //5px
+      width: 1em; //90px;
+      height: 1em; //90px;
+      background: #fff;
+      border-radius: 50%; //90px;
+      transition: 0.3s;
+    }
+
+    &__checkbox:checked + label {
+      background: $red_light;
+    }
+
+    &__checkbox:checked + label:after {
+      left: calc(100% - 3px);
+      transform: translateX(-100%);
+    }
+
+    &__label:active:after {
+      width: 1em; //130px
+    }
+
+    &__discount {
+      display: none;
+      border: 0;
+      border-radius: 1em;
+      background-color: $grayish_red_light;
+      color: $red_light;
+      font-size: 0.7em;
+      padding: 0.1em 0.5em;
+
+      @media (min-width: 768px) {
+        display: block;
+      }
+    }
+    &__minus {
+      border: 0;
+      border-radius: 1em;
+      background-color: $grayish_red_light;
+      color: $red_light;
+      font-size: 0.7em;
+      padding: 0.1em 0.5em;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__cta {
+    width: 100%;
+    padding: 2em 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top: 1px solid $grayish_blue_light;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 3em 5em;
+    }
+
+
+    &__list {
+      margin-bottom: 1em;
+      &__argument {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 1em;
+        color: $grayish_blue;
+        font-size: 0.8em;
+        line-height: 2em;
+
+        @media (min-width: 768px) {
+          justify-content: flex-start;
+          align-items: center;
+        }
+      }
+      &__argument::before {
+        display: flex;
+        content: '';
+        background-image: url('../src/img/icon-check.svg');
+        background-size: 0.8em 0.8em;
+        height: 0.8em;
+        width: 0.8em;
+      }
+    }
+
+    &__startButton {
+      border: none;
+      background-color: $blue_dark;
+      color: $blue_pale;
+      padding: 1em 3em;
+      border-radius: 2em;
+    }
+  }
+}

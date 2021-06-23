@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/img/favicon-32x32.png">
+    <title>Frontend Mentor | Interactive pricing component</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Simple, traffic-based pricing</h1>
+        <h2>Sign-up for our 30-day trial. No credit card required.</h2>
+    </div>
+    <div class="card">
+
+        <div class="card__pricing">
+            <p class="card__pricing__pageviews"><span class="card__pricing__pageviews__traffic">100k</span> Pageviews</p>
+            <input type="range" class="card__pricing__slider" min="0" max="4">
+            <div class="card__pricing__price">
+                <p class="card__pricing__price__sum">$<span class="card__pricing__price__sum__count">16.00</span></p>
+                <p class="card__pricing__price__period">/month</p>
+            </div>
+        </div>
+
+        <div class="card__options">
+            <p class="card__options__period">Monthly Billing</p>
+            <input class="card__options__checkbox" type="checkbox" id="switch" /><label class="card__options__label" for="switch"></label>
+            <p class="card__options__period">Yearly Billing</p>
+            <p class="card__options__discount">25% discount</p>
+            <p class="card__options__minus">-25%</p>
+        </div>
+
+        <div class="card__cta">
+            <ul class="card__cta__list">
+                <li class="card__cta__list__argument">Unlimited websites</li>
+                <li class="card__cta__list__argument">100% data ownership</li>
+                <li class="card__cta__list__argument">Email reports</li>
+            </ul>
+            <a class="card__cta__startButton" href="">Start my trial</a>
+        </div>
+
+    </div>
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
