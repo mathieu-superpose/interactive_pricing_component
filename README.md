@@ -10,6 +10,7 @@ This is a solution to the [Interactive pricing component challenge on Frontend M
 - [My process](#my-process)
   - [Built with](#built-with)
   - [Useful resources](#useful-resources)
+  - [Future Improvements](#future-improvements)
 - [Author](#author)
 
 ## Overview
@@ -43,9 +44,9 @@ Users should be able to:
 
 - [Custom slider](https://codepen.io/nlfonseca/pen/MwbovQ)
 
-### Future improvement
+### Future improvements
 
-- make the right part of the slider (inactive) a different color from the left part (active)
+- Make the right part of the slider (inactive) a different color from the left part (active)
 
 ## Author
 
