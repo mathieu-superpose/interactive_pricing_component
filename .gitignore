@@ -1,3 +1,5 @@
 .DS_Store
 /design
 style-guide.md
+/.sass-cache
+.sass-cache
